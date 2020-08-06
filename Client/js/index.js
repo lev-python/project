@@ -3,7 +3,7 @@ $(document).ready(function(){
     method: "GET",
     url: "http://127.0.0.1:5000/"
   })
-    .done(function( msg ) {
-      alert( "Data Saved: " + msg );
+    .done(function( data ) {
+     console.log ( data );
     });
   });
