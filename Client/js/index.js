@@ -4,6 +4,6 @@ $(document).ready(function(){
     url: "http://127.0.0.1:5000/"
   })
     .done(function( data ) {
-     console.log ( data );
+     $("#ALMAS").append( data.result[0] );
     });
   });

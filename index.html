@@ -8,6 +8,7 @@
         <meta name="author" content="">
         <title>Welcome to my project</title>
         
+        <link rel="stylesheet" href="css/style.css">
         <link rel="icon" href="/favicon.ico">
         <link rel="canonical" href="https://mysite.com/mypage">
         <!--Bootstrap CSS-->
@@ -57,6 +58,18 @@
 
         <div class="container content">
 
+            <div class="block">
+            </div>
+            <br>
+            <div class="block">
+            </div>
+            <br>
+            <div class="block">
+            </div>
+            <br>
+            <button class="btn">Анимировать</button>
+            <hr>
+            <div id="ALMAS"></div>
 
         </div>
 
@@ -65,6 +78,31 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <!-- own js -->
         <script src="js/index.js"></script>
+        <script src="js/anime.min.js"></script>
+        <script>
+            	 var blockMove = anime ({
+                    targets: '.block',
+                    translateX: -150,
+                    translateY: 300,
+                    autoplay: false,
+                    backgroundColor:'#FF6E00',
+                    borderRadius: '50%',
+                    easing:'linear',
+                    duration:2000,
+                    direction: 'alternate',
+                    loop: true,
+                    scale: {
+                        value: 2,
+                        duration: 1500,
+                        delay: 800,
+                        easing:'easeInOutQuart'
+                    }, 
+                    rotate: '1turn',
+                    });
+	 	            document.querySelector ('.btn').onclick = blockMove.restart;
+ 
+       </script>
     </body>
 </html>
